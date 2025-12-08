@@ -1,4 +1,10 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/python:3.14",
-  "features": {}
+	"name": "Python 3.14 with awscli",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+	"runArgs": [],
+	// Command to be executed after the container is created.
+	"postCreateCommand": "/usr/bin/echo  'Run aws configure to finish configuring awscli'"
 }
